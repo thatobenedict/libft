@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 18:05:14 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/04 15:51:07 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/04 17:24:56 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(void)
 {
 	//char s1[10] = "One";
 	char ft_s1[10] = "One";
-	const char s2[] = "hahahahahaha";
+	const char s2[] = "hahaha";
 
 	//strcat(s1, s2);
 	ft_strcat(ft_s1, s2);
