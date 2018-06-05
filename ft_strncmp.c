@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:46:07 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/05/31 12:33:04 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/05 15:06:02 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,30 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
+	size_t i;
+	unsigned char *ss1;
+	unsigned char *ss2;
+
+	ss1 = (unsigned char *)s1;
+	ss2 = (unsigned char *)s2;
+
+	i = 0;
+	while (ss1[i] != '\0' || ss2[i] != '\0')
+	{
+		if (ss1[i] == ss2[i])
+		{
+			if (i < n)
+				i++;
+			else
+				break;
+		}
+		else
+			return (ss1[i] - ss2[i]);
+	}
+	return (ss1[i] - ss2[i]);
+}
+	
+	/*{
 	size_t	i;
 
 	i = 0;
@@ -30,4 +54,4 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (s1[i] - s2[i]);
 	}
 	return (s1[i] - s2[i]);
-}
+}*/

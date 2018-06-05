@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 14:15:54 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 14:14:54 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/05 12:30:30 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/05 13:53:31 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(void)
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	s1[] = "One";
-	char	s2[] = "";
-	printf("%d\n", ft_strcmp(s1, s2));
-	printf("%d\n", strcmp(s1, s2));
-	return 0;
+	size_t lendst;
+	size_t lensrc;
+
+	lendst = ft_strlen(dst);
+	lensrc = ft_strlen(src);
+	if (dstsize < lendst + 1)
+		return (lensrc + dstsize);
+	ft_strncat(dst, src, dstsize - (lendst + 1));
+	return (lendst + lensrc);
 }

@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 14:15:54 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 14:14:54 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/05 16:47:19 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/05 16:47:39 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(void)
+void	ft_strdel(char **ap)
 {
-	char	s1[] = "One";
-	char	s2[] = "";
-	printf("%d\n", ft_strcmp(s1, s2));
-	printf("%d\n", strcmp(s1, s2));
-	return 0;
+	free (*ap);
+	*ap = NULL;
 }

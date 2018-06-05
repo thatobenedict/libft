@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 14:15:54 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 14:14:54 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/05 16:21:08 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/05 16:38:30 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(void)
+char	*ft_strnew(size_t size)
 {
-	char	s1[] = "One";
-	char	s2[] = "";
-	printf("%d\n", ft_strcmp(s1, s2));
-	printf("%d\n", strcmp(s1, s2));
-	return 0;
+	char	*fresh;
+
+	if ((fresh = malloc(size + 1)) == NULL)
+		return (NULL);
+	ft_bzero(fresh, size + 1);
+	return (fresh);
 }

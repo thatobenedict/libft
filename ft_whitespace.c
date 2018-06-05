@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_whitespace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 14:15:54 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 14:14:54 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/05 14:21:37 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/05 14:27:32 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		main(void)
+int		ft_whitespace(int c)
 {
-	char	s1[] = "One";
-	char	s2[] = "";
-	printf("%d\n", ft_strcmp(s1, s2));
-	printf("%d\n", strcmp(s1, s2));
-	return 0;
+	return ((c >= 9 && c <= 13) || c == ' ' || c == '\t' || c == '\r');
 }

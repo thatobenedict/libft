@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:48:04 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/01 16:36:15 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/05 16:48:01 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,12 @@ char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+int		ft_whitespace(int c);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **ap);
+
+
 
 #endif
