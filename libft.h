@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:48:04 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 16:48:01 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/05 17:06:28 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	ft_memdel(void **ap);
 int		ft_whitespace(int c);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **ap);
+void	ft_strclr(char *s);
 
 
 
