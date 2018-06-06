@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:48:04 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 17:06:28 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/06 16:36:07 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 # include <string.h> /* delete */
 
 void	ft_putchar(char c);
-void	ft_putstr(char *str);
+void	ft_putstr(char *s);
 int		ft_strlen(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t len);
 int		ft_strcmp(const char *s1, const char *s2);
-int		ft_strncmp(const char *s1, const char *s2, size_t n); /*your n condition is dodgy, only 5/6 of the tests*/
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isprint(int c);
@@ -53,7 +53,12 @@ int		ft_whitespace(int c);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **ap);
 void	ft_strclr(char *s);
-
-
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_striter(char *s, void (*f)(char *));
+void 	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putnbr(int n);
 
 #endif

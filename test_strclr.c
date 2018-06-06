@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   test_strclr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 10:58:34 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/06 16:25:40 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/06 08:53:02 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/06 09:12:01 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+int		main(void)
 {
-	free (*ap);
-	*ap = NULL;
+	char str[] = "Hello";
+
+	printf("%s\n", str);
+	ft_strclr(str);
+	printf("%s\n", str);
+	return (0);
 }

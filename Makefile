@@ -6,7 +6,7 @@
 #    By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 13:11:27 by tbenedic          #+#    #+#              #
-#    Updated: 2018/06/05 16:45:19 by tbenedic         ###   ########.fr        #
+#    Updated: 2018/06/06 16:37:00 by tbenedic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,13 @@ ft_strlcat \
 ft_whitespace \
 ft_strnew \
 ft_strdel \
+ft_putchar_fd \
+ft_putendl \
+ft_putstr_fd \
+ft_putendl_fd \
+ft_striter \
+ft_striteri \
+ft_putnbr \
 
 SRCC = $(addsuffix .c, $(FUNCS))
 SRCO = $(addsuffix .o, $(FUNCS)) 
