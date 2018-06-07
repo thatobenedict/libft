@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   test_putnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/01 10:29:39 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/07 15:27:28 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/07 07:42:23 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/07 09:53:16 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+int		main (void)
 {
-	size_t i;
-
-	i = 0;
-	if (len == 0)
-		return (dst);
-	while (i < len)
-	{
-		if (src[i] != '\0')
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		else
-			while (i < len)
-			{
-				dst[i] = '\0';
-				i++;
-			}
-	}
-	return (dst);
+	int n = –2147483648;
+	ft_putnbr(n);
+	return (0);
 }

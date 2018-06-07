@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/01 10:29:39 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/07 15:27:28 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/07 11:20:28 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/07 14:24:14 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t i;
-
+	char *snew;
+	int  i;
+	
 	i = 0;
-	if (len == 0)
-		return (dst);
-	while (i < len)
+	if (s)
 	{
-		if (src[i] != '\0')
+		if ((snew = ft_strdup(s)))
 		{
-			dst[i] = src[i];
-			i++;
-		}
-		else
-			while (i < len)
+			if (snew[i] != '\0')
 			{
-				dst[i] = '\0';
-				i++;
+				while (snew[i] != '\0')
+				{
+					snew[i] = f(snew[i]);
+					i++;
+				}
+				return (snew);
 			}
+		}
 	}
-	return (dst);
+	return (0);
 }

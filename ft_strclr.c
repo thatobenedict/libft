@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 08:48:45 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/06 09:12:03 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/07 11:18:33 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_strclr(char *s)
 {
-	size_t i;
-
-	i = 0;
-	while (s)
+	if (s)
 	{
-		s[i] = '\0';
-		i++;
+		ft_bzero(s, ft_strlen(s));
 	}
 }
