@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   test_strtrim.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/07 15:27:55 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/12 11:20:57 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/12 09:50:21 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/12 13:25:37 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+int		main(void)
 {
-	unsigned int    i;
-	int				j;
-	int				k;
-	char         *sub;
+	char str[]= "     Hello     ";
+	char *str1;
 
-	if (!s)
-		return (0);
-	i =     0;
-	j = start;
-	k = j + (int)len;
-	if (!(sub = (malloc(len + 1))))
-		return (0);
-	while (s && j < k)
-	{
-		sub[i] = s[j];
-		i++;
-		j++;
-	}
-	sub[len] = '\0';
-	return (sub);
+	printf("%d\n", ft_strlen(str));
+	str1 = ft_strtrim(str);
+	printf("%d\n\n", ft_strlen(str1));
+	printf("|%s|\n", str1);
 }

@@ -6,7 +6,7 @@
 #    By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 13:11:27 by tbenedic          #+#    #+#              #
-#    Updated: 2018/06/10 18:00:25 by tbenedic         ###   ########.fr        #
+#    Updated: 2018/06/12 13:28:26 by tbenedic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,8 @@ ft_strequ  \
 ft_strnequ \
 ft_strsub \
 ft_strjoin \
-ft_newspacetab \
+ft_strtrim \
+ft_strsplit \
 
 SRCC = $(addsuffix .c, $(FUNCS))
 SRCO = $(addsuffix .o, $(FUNCS)) 
