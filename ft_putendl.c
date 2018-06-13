@@ -6,18 +6,18 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 09:44:44 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/06 16:27:12 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/13 18:38:15 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putendl(char const *s)
-{	
+{
+	int		i;
+
 	if (!s)
 		return ;
-	int i;
-
 	i = 0;
 	while (s[i] != '\0')
 	{

@@ -6,18 +6,18 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:43:33 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/06 16:26:31 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/13 18:43:37 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_putstr(char *s)
-{	
+void	ft_putstr(char const *s)
+{
+	int		i;
+
 	if (!s)
 		return ;
-	int	i;
-
 	i = 0;
 	while (s[i] != '\0')
 	{

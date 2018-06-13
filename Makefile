@@ -6,7 +6,7 @@
 #    By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 13:11:27 by tbenedic          #+#    #+#              #
-#    Updated: 2018/06/12 13:28:26 by tbenedic         ###   ########.fr        #
+#    Updated: 2018/06/13 16:32:06 by tbenedic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,3 +101,11 @@ fclean:
 		rm -f $(NAME)
 
 re: fclean all
+
+norm:
+	norminette libft.h
+	norminette $(wordlist 1, 20, $(CFILES))
+	norminette $(wordlist 21, 40, $(CFILES))
+	norminette $(wordlist 41, 60, $(CFILES))
+	norminette $(wordlist 61, 80, $(CFILES))
+	norminette $(wordlist 81, 100, $(CFILES))

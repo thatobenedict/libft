@@ -6,14 +6,17 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 10:58:34 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/06 16:25:40 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/13 18:34:22 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {
-	free (*ap);
+	if (!ap)
+		return ;
+	free(*ap);
 	*ap = NULL;
 }

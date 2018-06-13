@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   test_strsplit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/07 11:20:28 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/13 18:54:28 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/13 12:28:20 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/13 16:09:21 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int		main(void)
 {
-	char	*snew;
-	int		i;
-	
-	i = 0;
-	if (s)
+	char str[] = "***********************************************olol";
+	char **arr = ft_strsplit(str, '*');
+
+	printf("|%zu|\n", ft_word_count(str, '*'));
+	while (*arr)
 	{
-		if ((snew = ft_strdup(s)))
-		{
-			if (snew[i] != '\0')
-			{
-				while (snew[i] != '\0')
-				{
-					snew[i] = f(snew[i]);
-					i++;
-				}
-				return (snew);
-			}
-		}
+	printf("%s\n", *arr);
+	arr++;
 	}
 	return (0);
+
 }
