@@ -6,7 +6,7 @@
 #    By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 13:11:27 by tbenedic          #+#    #+#              #
-#    Updated: 2018/06/13 16:32:06 by tbenedic         ###   ########.fr        #
+#    Updated: 2018/06/14 16:05:27 by tbenedic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ ft_strsub \
 ft_strjoin \
 ft_strtrim \
 ft_strsplit \
+ft_itoa \
 
 SRCC = $(addsuffix .c, $(FUNCS))
 SRCO = $(addsuffix .o, $(FUNCS)) 
@@ -97,8 +98,8 @@ $(NAME):
 clean:
 		rm -f $(SRCO)
 
-fclean:
-		rm -f $(NAME)
+fclean: clean
+		rm -f $(NAME) 
 
 re: fclean all
 

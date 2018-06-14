@@ -6,13 +6,13 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 13:23:29 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/13 16:09:30 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/14 16:06:11 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_word_count(const char *str, char c)
+static size_t		ft_word_count(const char *str, char c)
 {
 	size_t		i;
 	size_t		j;
@@ -32,7 +32,7 @@ size_t		ft_word_count(const char *str, char c)
 	return (j);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	char		**arr;
 	size_t		i;

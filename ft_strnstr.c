@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 16:42:50 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/05 11:49:54 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/14 15:49:25 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			if (j == k)
 				return ((char *)haystack + (i - j));
 		}
-		i++;
+		i = i - j + 1;
 	}
 	return (NULL);
 }

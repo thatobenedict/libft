@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_putendl_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:52:27 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 16:13:45 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/06 10:16:51 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/06 12:01:23 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		main(void)
 {
-	unsigned int	i;
-
-	if (!s || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		(*f)(i, &s[i]);
-		i++;
-	}
+	char s[] = "the cake is a lie !\0I'm hidden lol\r\n";
+	int fd = 1;
+	
+	printf("%c", '|');
+	ft_putendl_fd(s, fd);
+	printf("%c", '|');
+	return (0);
 }

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_strdup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:52:27 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 16:13:45 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/05/30 16:49:12 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/04 13:46:17 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		main(void)
 {
-	unsigned int	i;
+	int i = 0;
+	const char *s[] = {"", "hello", "    hello", "hello    "};
 
-	if (!s || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	while (i < 4)
 	{
-		(*f)(i, &s[i]);
+		printf("|%s|\n", strdup(s[i]));
+		printf("|%s|\n\n", ft_strdup(s[i]));
 		i++;
-	}
+	}	
+	return 0;
 }

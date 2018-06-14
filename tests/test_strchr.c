@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_strchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:52:27 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 16:13:45 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/05/31 10:15:39 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/05/31 11:42:08 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		main(void)
 {
-	unsigned int	i;
+	char s[] = "Hello World";
+	int c = 'e';
+	char *ret1;
+	char *ret2;
+	ret1 = strchr(s, c);
+	printf("%s\n", ret1);
+	ret2 = ft_strchr(s, c);
+	printf("%s\n", ret2);
 
-	if (!s || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		(*f)(i, &s[i]);
-		i++;
-	}
+	return (0);
 }

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_strsplit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:52:27 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 16:13:45 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/13 12:28:20 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/13 16:09:21 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		main(void)
 {
-	unsigned int	i;
+	char str[] = "***********************************************olol";
+	char **arr = ft_strsplit(str, '*');
 
-	if (!s || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	printf("|%zu|\n", ft_word_count(str, '*'));
+	while (*arr)
 	{
-		(*f)(i, &s[i]);
-		i++;
+	printf("%s\n", *arr);
+	arr++;
 	}
+	return (0);
+
 }

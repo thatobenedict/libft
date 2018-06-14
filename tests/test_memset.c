@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_memset.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:52:27 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 16:13:45 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/05/28 16:09:45 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/05/29 11:11:57 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		main(void)
 {
-	unsigned int	i;
+	char str[] = "Hello World";
+	int c = '$';
+	size_t len = 12;
 
-	if (!s || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		(*f)(i, &s[i]);
-		i++;
-	}
+	memset(str, c, len);
+	printf("%s\n", str);
+	ft_memset(str, c, len);
+	printf("%s\n", str);
+
+	return (0);
 }

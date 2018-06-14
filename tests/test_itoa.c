@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_itoa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:52:27 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 16:13:45 by tbenedic         ###   ########.fr       */
+/*   Created: 2018/06/14 10:04:35 by tbenedic          #+#    #+#             */
+/*   Updated: 2018/06/14 14:43:30 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		main()
 {
-	unsigned int	i;
+	int i = 0;
+	int n[] = {7574775, -25, 0, -0, -10000000};
 
-	if (!s || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	while (i < 5)
 	{
-		(*f)(i, &s[i]);
-		i++;
+	char *res = ft_itoa(n[i]);
+	printf("%s\n", res);
+	i++;
 	}
+	return (0);
 }

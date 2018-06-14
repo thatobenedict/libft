@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/10 16:37:20 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/13 18:41:36 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/14 17:48:01 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!(ss2 = ft_strdup(s2)))
 		return (0);
 	ft_strcat(ss1, ss2);
-	free(ss2);
 	return (ss1);
 }

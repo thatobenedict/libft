@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/07 11:20:28 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/13 18:54:28 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/14 09:43:24 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*snew;
 	int		i;
-	
+
 	i = 0;
 	if (s)
 	{
