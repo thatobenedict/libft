@@ -6,16 +6,16 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 11:54:06 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/13 18:19:20 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/15 11:52:27 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str)
+int		ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
