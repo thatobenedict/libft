@@ -6,7 +6,7 @@
 /*   By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:48:04 by tbenedic          #+#    #+#             */
-/*   Updated: 2018/06/14 11:34:45 by tbenedic         ###   ########.fr       */
+/*   Updated: 2018/06/15 10:54:42 by tbenedic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,8 @@ void	ft_putnbr_fd(int n, int fd);
  ** EXTRAS
 */
 int		ft_whitespace(int c);
+char	*ft_strrev(char *str);
+int		ft_ismin(int a, int b);
+int		ft_ismax(int a, int b);
+size_t	ft_white_word_count(const char *str);
 #endif

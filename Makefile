@@ -6,7 +6,7 @@
 #    By: tbenedic <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/28 13:11:27 by tbenedic          #+#    #+#              #
-#    Updated: 2018/06/14 16:05:27 by tbenedic         ###   ########.fr        #
+#    Updated: 2018/06/15 10:47:30 by tbenedic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,10 @@ ft_strjoin \
 ft_strtrim \
 ft_strsplit \
 ft_itoa \
+ft_strrev \
+ft_ismin \
+ft_ismax \
+ft_white_word_count \
 
 SRCC = $(addsuffix .c, $(FUNCS))
 SRCO = $(addsuffix .o, $(FUNCS)) 
